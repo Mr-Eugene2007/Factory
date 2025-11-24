@@ -1,0 +1,72 @@
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\Pages\Autho.g.cs
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\Pages\Client.g.cs
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\Pages\Autho.baml
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\Pages\Client.baml
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\velts\source\repos\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Authorization.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Authorization.baml
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Client.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Client.baml
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Client2.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\WpfApp1 (2)\WpfApp1\WpfApp1\obj\Debug\Pages\Client2.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\Authorization.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\Client.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\Authorization.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\Client.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\EntityFramework.dll
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\EntityFramework.xml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.Up2Date
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoCustomer.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoSupplier.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoCustomer.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoSupplier.baml

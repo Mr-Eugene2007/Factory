@@ -1,0 +1,1201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище BeverageFactoryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Autho">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="autho_id" Type="int" />
+        </EntityType>
+        <EntityType Name="MaterialMovements">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="material_id" Type="int" Nullable="false" />
+          <Property Name="type_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="reason" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="MovementTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Production">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="int" Nullable="false" />
+          <Property Name="good_quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="defect_quantity" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="production_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProductionOrders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="planned_quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="actual_quantity" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="status_id" Type="int" Nullable="false" />
+          <Property Name="priority" Type="int" />
+          <Property Name="start_date" Type="datetime" />
+          <Property Name="end_date" Type="datetime" />
+          <Property Name="created_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="type_id" Type="int" Nullable="false" />
+          <Property Name="unit_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductStock">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="batch_number" Type="nvarchar" MaxLength="100" />
+          <Property Name="quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="production_date" Type="date" />
+          <Property Name="expiry_date" Type="date" />
+        </EntityType>
+        <EntityType Name="ProductTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RawMaterials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="unit_id" Type="int" Nullable="false" />
+          <Property Name="current_stock" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="min_stock" Type="decimal" Precision="15" Scale="3" />
+          <Property Name="supplier_id" Type="int" />
+          <Property Name="price" Type="decimal" Precision="15" Scale="2" />
+        </EntityType>
+        <EntityType Name="Recipes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="material_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShipmentItems">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="shipment_id" Type="int" Nullable="false" />
+          <Property Name="product_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="decimal" Precision="15" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shipments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="shipment_date" Type="datetime" />
+          <Property Name="status_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StatusTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Suppliers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="last_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="surname" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="autho_id" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="UnitTypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Customers__autho__4AB81AF0">
+          <End Role="Autho" Type="Self.Autho" Multiplicity="0..1" />
+          <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Autho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="autho_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__mater__68487DD7">
+          <End Role="RawMaterials" Type="Self.RawMaterials" Multiplicity="1" />
+          <End Role="MaterialMovements" Type="Self.MaterialMovements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterials">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MaterialMovements">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__type___693CA210">
+          <End Role="MovementTypes" Type="Self.MovementTypes" Multiplicity="1" />
+          <End Role="MaterialMovements" Type="Self.MaterialMovements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovementTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MaterialMovements">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__order__619B8048">
+          <End Role="ProductionOrders" Type="Self.ProductionOrders" Multiplicity="1" />
+          <End Role="Production" Type="Self.Production" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductionOrders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Production">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__produ__5BE2A6F2">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProductionOrders" Type="Self.ProductionOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductionOrders">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__statu__5CD6CB2B">
+          <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+          <End Role="ProductionOrders" Type="Self.ProductionOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductionOrders">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__type_i__52593CB8">
+          <End Role="ProductTypes" Type="Self.ProductTypes" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__unit_i__534D60F1">
+          <End Role="UnitTypes" Type="Self.UnitTypes" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductSt__produ__6477ECF3">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductStock">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RawMateri__suppl__4F7CD00D">
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+          <End Role="RawMaterials" Type="Self.RawMaterials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RawMaterials">
+              <PropertyRef Name="supplier_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RawMateri__unit___4E88ABD4">
+          <End Role="UnitTypes" Type="Self.UnitTypes" Multiplicity="1" />
+          <End Role="RawMaterials" Type="Self.RawMaterials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RawMaterials">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recipes__materia__571DF1D5">
+          <End Role="RawMaterials" Type="Self.RawMaterials" Multiplicity="1" />
+          <End Role="Recipes" Type="Self.Recipes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterials">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recipes">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recipes__product__5629CD9C">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="Recipes" Type="Self.Recipes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recipes">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShipmentI__produ__71D1E811">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="ShipmentItems" Type="Self.ShipmentItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ShipmentItems">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShipmentI__shipm__70DDC3D8">
+          <End Role="Shipments" Type="Self.Shipments" Multiplicity="1" />
+          <End Role="ShipmentItems" Type="Self.ShipmentItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shipments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ShipmentItems">
+              <PropertyRef Name="shipment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shipments__custo__6D0D32F4">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Shipments" Type="Self.Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Shipments">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shipments__statu__6E01572D">
+          <End Role="StatusTypes" Type="Self.StatusTypes" Multiplicity="1" />
+          <End Role="Shipments" Type="Self.Shipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Shipments">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Suppliers__autho__46E78A0C">
+          <End Role="Autho" Type="Self.Autho" Multiplicity="0..1" />
+          <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Autho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Suppliers">
+              <PropertyRef Name="autho_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище BeverageFactoryModelContainer">
+          <EntitySet Name="Autho" EntityType="Self.Autho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaterialMovements" EntityType="Self.MaterialMovements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MovementTypes" EntityType="Self.MovementTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Production" EntityType="Self.Production" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductionOrders" EntityType="Self.ProductionOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductStock" EntityType="Self.ProductStock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductTypes" EntityType="Self.ProductTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RawMaterials" EntityType="Self.RawMaterials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recipes" EntityType="Self.Recipes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShipmentItems" EntityType="Self.ShipmentItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shipments" EntityType="Self.Shipments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatusTypes" EntityType="Self.StatusTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UnitTypes" EntityType="Self.UnitTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Customers__autho__4AB81AF0" Association="Self.FK__Customers__autho__4AB81AF0">
+            <End Role="Autho" EntitySet="Autho" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__mater__68487DD7" Association="Self.FK__MaterialM__mater__68487DD7">
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+            <End Role="MaterialMovements" EntitySet="MaterialMovements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__type___693CA210" Association="Self.FK__MaterialM__type___693CA210">
+            <End Role="MovementTypes" EntitySet="MovementTypes" />
+            <End Role="MaterialMovements" EntitySet="MaterialMovements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__order__619B8048" Association="Self.FK__Productio__order__619B8048">
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+            <End Role="Production" EntitySet="Production" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__produ__5BE2A6F2" Association="Self.FK__Productio__produ__5BE2A6F2">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__statu__5CD6CB2B" Association="Self.FK__Productio__statu__5CD6CB2B">
+            <End Role="StatusTypes" EntitySet="StatusTypes" />
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__type_i__52593CB8" Association="Self.FK__Products__type_i__52593CB8">
+            <End Role="ProductTypes" EntitySet="ProductTypes" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__unit_i__534D60F1" Association="Self.FK__Products__unit_i__534D60F1">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductSt__produ__6477ECF3" Association="Self.FK__ProductSt__produ__6477ECF3">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductStock" EntitySet="ProductStock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RawMateri__suppl__4F7CD00D" Association="Self.FK__RawMateri__suppl__4F7CD00D">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RawMateri__unit___4E88ABD4" Association="Self.FK__RawMateri__unit___4E88ABD4">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recipes__materia__571DF1D5" Association="Self.FK__Recipes__materia__571DF1D5">
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+            <End Role="Recipes" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recipes__product__5629CD9C" Association="Self.FK__Recipes__product__5629CD9C">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Recipes" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShipmentI__produ__71D1E811" Association="Self.FK__ShipmentI__produ__71D1E811">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShipmentItems" EntitySet="ShipmentItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShipmentI__shipm__70DDC3D8" Association="Self.FK__ShipmentI__shipm__70DDC3D8">
+            <End Role="Shipments" EntitySet="Shipments" />
+            <End Role="ShipmentItems" EntitySet="ShipmentItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shipments__custo__6D0D32F4" Association="Self.FK__Shipments__custo__6D0D32F4">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Shipments" EntitySet="Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shipments__statu__6E01572D" Association="Self.FK__Shipments__statu__6E01572D">
+            <End Role="StatusTypes" EntitySet="StatusTypes" />
+            <End Role="Shipments" EntitySet="Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Suppliers__autho__46E78A0C" Association="Self.FK__Suppliers__autho__46E78A0C">
+            <End Role="Autho" EntitySet="Autho" />
+            <End Role="Suppliers" EntitySet="Suppliers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BeverageFactoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Autho">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__autho__4AB81AF0" FromRole="Autho" ToRole="Customers" />
+          <NavigationProperty Name="Suppliers" Relationship="Self.FK__Suppliers__autho__46E78A0C" FromRole="Autho" ToRole="Suppliers" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="autho_id" Type="Int32" />
+          <NavigationProperty Name="Autho" Relationship="Self.FK__Customers__autho__4AB81AF0" FromRole="Customers" ToRole="Autho" />
+          <NavigationProperty Name="Shipments" Relationship="Self.FK__Shipments__custo__6D0D32F4" FromRole="Customers" ToRole="Shipments" />
+        </EntityType>
+        <EntityType Name="MaterialMovement">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="material_id" Type="Int32" Nullable="false" />
+          <Property Name="type_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="reason" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="RawMaterial" Relationship="Self.FK__MaterialM__mater__68487DD7" FromRole="MaterialMovements" ToRole="RawMaterials" />
+          <NavigationProperty Name="MovementType" Relationship="Self.FK__MaterialM__type___693CA210" FromRole="MaterialMovements" ToRole="MovementTypes" />
+        </EntityType>
+        <EntityType Name="MovementType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MaterialMovements" Relationship="Self.FK__MaterialM__type___693CA210" FromRole="MovementTypes" ToRole="MaterialMovements" />
+        </EntityType>
+        <EntityType Name="Production">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="Int32" Nullable="false" />
+          <Property Name="good_quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="defect_quantity" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="production_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ProductionOrder" Relationship="Self.FK__Productio__order__619B8048" FromRole="Production" ToRole="ProductionOrders" />
+        </EntityType>
+        <EntityType Name="ProductionOrder">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="planned_quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="actual_quantity" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="status_id" Type="Int32" Nullable="false" />
+          <Property Name="priority" Type="Int32" />
+          <Property Name="start_date" Type="DateTime" Precision="3" />
+          <Property Name="end_date" Type="DateTime" Precision="3" />
+          <Property Name="created_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Productions" Relationship="Self.FK__Productio__order__619B8048" FromRole="ProductionOrders" ToRole="Production" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Productio__produ__5BE2A6F2" FromRole="ProductionOrders" ToRole="Products" />
+          <NavigationProperty Name="StatusType" Relationship="Self.FK__Productio__statu__5CD6CB2B" FromRole="ProductionOrders" ToRole="StatusTypes" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type_id" Type="Int32" Nullable="false" />
+          <Property Name="unit_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProductionOrders" Relationship="Self.FK__Productio__produ__5BE2A6F2" FromRole="Products" ToRole="ProductionOrders" />
+          <NavigationProperty Name="ProductType" Relationship="Self.FK__Products__type_i__52593CB8" FromRole="Products" ToRole="ProductTypes" />
+          <NavigationProperty Name="UnitType" Relationship="Self.FK__Products__unit_i__534D60F1" FromRole="Products" ToRole="UnitTypes" />
+          <NavigationProperty Name="ProductStocks" Relationship="Self.FK__ProductSt__produ__6477ECF3" FromRole="Products" ToRole="ProductStock" />
+          <NavigationProperty Name="Recipes" Relationship="Self.FK__Recipes__product__5629CD9C" FromRole="Products" ToRole="Recipes" />
+          <NavigationProperty Name="ShipmentItems" Relationship="Self.FK__ShipmentI__produ__71D1E811" FromRole="Products" ToRole="ShipmentItems" />
+        </EntityType>
+        <EntityType Name="ProductStock">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="batch_number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <Property Name="production_date" Type="DateTime" Precision="0" />
+          <Property Name="expiry_date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__ProductSt__produ__6477ECF3" FromRole="ProductStock" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="ProductType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__type_i__52593CB8" FromRole="ProductTypes" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="RawMaterial">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="unit_id" Type="Int32" Nullable="false" />
+          <Property Name="current_stock" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="min_stock" Type="Decimal" Precision="15" Scale="3" />
+          <Property Name="supplier_id" Type="Int32" />
+          <Property Name="price" Type="Decimal" Precision="15" Scale="2" />
+          <NavigationProperty Name="MaterialMovements" Relationship="Self.FK__MaterialM__mater__68487DD7" FromRole="RawMaterials" ToRole="MaterialMovements" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK__RawMateri__suppl__4F7CD00D" FromRole="RawMaterials" ToRole="Suppliers" />
+          <NavigationProperty Name="UnitType" Relationship="Self.FK__RawMateri__unit___4E88ABD4" FromRole="RawMaterials" ToRole="UnitTypes" />
+          <NavigationProperty Name="Recipes" Relationship="Self.FK__Recipes__materia__571DF1D5" FromRole="RawMaterials" ToRole="Recipes" />
+        </EntityType>
+        <EntityType Name="Recipe">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="material_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Recipes__product__5629CD9C" FromRole="Recipes" ToRole="Products" />
+          <NavigationProperty Name="RawMaterial" Relationship="Self.FK__Recipes__materia__571DF1D5" FromRole="Recipes" ToRole="RawMaterials" />
+        </EntityType>
+        <EntityType Name="ShipmentItem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="shipment_id" Type="Int32" Nullable="false" />
+          <Property Name="product_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Decimal" Precision="15" Scale="3" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__ShipmentI__produ__71D1E811" FromRole="ShipmentItems" ToRole="Products" />
+          <NavigationProperty Name="Shipment" Relationship="Self.FK__ShipmentI__shipm__70DDC3D8" FromRole="ShipmentItems" ToRole="Shipments" />
+        </EntityType>
+        <EntityType Name="Shipment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="shipment_date" Type="DateTime" Precision="3" />
+          <Property Name="status_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__Shipments__custo__6D0D32F4" FromRole="Shipments" ToRole="Customers" />
+          <NavigationProperty Name="ShipmentItems" Relationship="Self.FK__ShipmentI__shipm__70DDC3D8" FromRole="Shipments" ToRole="ShipmentItems" />
+          <NavigationProperty Name="StatusType" Relationship="Self.FK__Shipments__statu__6E01572D" FromRole="Shipments" ToRole="StatusTypes" />
+        </EntityType>
+        <EntityType Name="StatusType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ProductionOrders" Relationship="Self.FK__Productio__statu__5CD6CB2B" FromRole="StatusTypes" ToRole="ProductionOrders" />
+          <NavigationProperty Name="Shipments" Relationship="Self.FK__Shipments__statu__6E01572D" FromRole="StatusTypes" ToRole="Shipments" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="autho_id" Type="Int32" />
+          <NavigationProperty Name="Autho" Relationship="Self.FK__Suppliers__autho__46E78A0C" FromRole="Suppliers" ToRole="Autho" />
+          <NavigationProperty Name="RawMaterials" Relationship="Self.FK__RawMateri__suppl__4F7CD00D" FromRole="Suppliers" ToRole="RawMaterials" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UnitType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__unit_i__534D60F1" FromRole="UnitTypes" ToRole="Products" />
+          <NavigationProperty Name="RawMaterials" Relationship="Self.FK__RawMateri__unit___4E88ABD4" FromRole="UnitTypes" ToRole="RawMaterials" />
+        </EntityType>
+        <Association Name="FK__Customers__autho__4AB81AF0">
+          <End Role="Autho" Type="Self.Autho" Multiplicity="0..1" />
+          <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Autho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Customers">
+              <PropertyRef Name="autho_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Suppliers__autho__46E78A0C">
+          <End Role="Autho" Type="Self.Autho" Multiplicity="0..1" />
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Autho">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Suppliers">
+              <PropertyRef Name="autho_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shipments__custo__6D0D32F4">
+          <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Shipments" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Shipments">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__mater__68487DD7">
+          <End Role="RawMaterials" Type="Self.RawMaterial" Multiplicity="1" />
+          <End Role="MaterialMovements" Type="Self.MaterialMovement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterials">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MaterialMovements">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialM__type___693CA210">
+          <End Role="MovementTypes" Type="Self.MovementType" Multiplicity="1" />
+          <End Role="MaterialMovements" Type="Self.MaterialMovement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MovementTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="MaterialMovements">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__order__619B8048">
+          <End Role="ProductionOrders" Type="Self.ProductionOrder" Multiplicity="1" />
+          <End Role="Production" Type="Self.Production" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductionOrders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Production">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__produ__5BE2A6F2">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductionOrders" Type="Self.ProductionOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductionOrders">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productio__statu__5CD6CB2B">
+          <End Role="StatusTypes" Type="Self.StatusType" Multiplicity="1" />
+          <End Role="ProductionOrders" Type="Self.ProductionOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductionOrders">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__type_i__52593CB8">
+          <End Role="ProductTypes" Type="Self.ProductType" Multiplicity="1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__unit_i__534D60F1">
+          <End Role="UnitTypes" Type="Self.UnitType" Multiplicity="1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductSt__produ__6477ECF3">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductStock" Type="Self.ProductStock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ProductStock">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recipes__product__5629CD9C">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="Recipes" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recipes">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShipmentI__produ__71D1E811">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="ShipmentItems" Type="Self.ShipmentItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ShipmentItems">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RawMateri__suppl__4F7CD00D">
+          <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+          <End Role="RawMaterials" Type="Self.RawMaterial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Suppliers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RawMaterials">
+              <PropertyRef Name="supplier_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RawMateri__unit___4E88ABD4">
+          <End Role="UnitTypes" Type="Self.UnitType" Multiplicity="1" />
+          <End Role="RawMaterials" Type="Self.RawMaterial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="RawMaterials">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Recipes__materia__571DF1D5">
+          <End Role="RawMaterials" Type="Self.RawMaterial" Multiplicity="1" />
+          <End Role="Recipes" Type="Self.Recipe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RawMaterials">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recipes">
+              <PropertyRef Name="material_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShipmentI__shipm__70DDC3D8">
+          <End Role="Shipments" Type="Self.Shipment" Multiplicity="1" />
+          <End Role="ShipmentItems" Type="Self.ShipmentItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shipments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ShipmentItems">
+              <PropertyRef Name="shipment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shipments__statu__6E01572D">
+          <End Role="StatusTypes" Type="Self.StatusType" Multiplicity="1" />
+          <End Role="Shipments" Type="Self.Shipment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusTypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Shipments">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BeverageFactoryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Authoes" EntityType="Self.Autho" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="MaterialMovements" EntityType="Self.MaterialMovement" />
+          <EntitySet Name="MovementTypes" EntityType="Self.MovementType" />
+          <EntitySet Name="Productions" EntityType="Self.Production" />
+          <EntitySet Name="ProductionOrders" EntityType="Self.ProductionOrder" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="ProductStocks" EntityType="Self.ProductStock" />
+          <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+          <EntitySet Name="RawMaterials" EntityType="Self.RawMaterial" />
+          <EntitySet Name="Recipes" EntityType="Self.Recipe" />
+          <EntitySet Name="ShipmentItems" EntityType="Self.ShipmentItem" />
+          <EntitySet Name="Shipments" EntityType="Self.Shipment" />
+          <EntitySet Name="StatusTypes" EntityType="Self.StatusType" />
+          <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="UnitTypes" EntityType="Self.UnitType" />
+          <AssociationSet Name="FK__Customers__autho__4AB81AF0" Association="Self.FK__Customers__autho__4AB81AF0">
+            <End Role="Autho" EntitySet="Authoes" />
+            <End Role="Customers" EntitySet="Customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Suppliers__autho__46E78A0C" Association="Self.FK__Suppliers__autho__46E78A0C">
+            <End Role="Autho" EntitySet="Authoes" />
+            <End Role="Suppliers" EntitySet="Suppliers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shipments__custo__6D0D32F4" Association="Self.FK__Shipments__custo__6D0D32F4">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Shipments" EntitySet="Shipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__mater__68487DD7" Association="Self.FK__MaterialM__mater__68487DD7">
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+            <End Role="MaterialMovements" EntitySet="MaterialMovements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialM__type___693CA210" Association="Self.FK__MaterialM__type___693CA210">
+            <End Role="MovementTypes" EntitySet="MovementTypes" />
+            <End Role="MaterialMovements" EntitySet="MaterialMovements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__order__619B8048" Association="Self.FK__Productio__order__619B8048">
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+            <End Role="Production" EntitySet="Productions" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__produ__5BE2A6F2" Association="Self.FK__Productio__produ__5BE2A6F2">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productio__statu__5CD6CB2B" Association="Self.FK__Productio__statu__5CD6CB2B">
+            <End Role="StatusTypes" EntitySet="StatusTypes" />
+            <End Role="ProductionOrders" EntitySet="ProductionOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__type_i__52593CB8" Association="Self.FK__Products__type_i__52593CB8">
+            <End Role="ProductTypes" EntitySet="ProductTypes" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__unit_i__534D60F1" Association="Self.FK__Products__unit_i__534D60F1">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductSt__produ__6477ECF3" Association="Self.FK__ProductSt__produ__6477ECF3">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductStock" EntitySet="ProductStocks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recipes__product__5629CD9C" Association="Self.FK__Recipes__product__5629CD9C">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Recipes" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShipmentI__produ__71D1E811" Association="Self.FK__ShipmentI__produ__71D1E811">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShipmentItems" EntitySet="ShipmentItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RawMateri__suppl__4F7CD00D" Association="Self.FK__RawMateri__suppl__4F7CD00D">
+            <End Role="Suppliers" EntitySet="Suppliers" />
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RawMateri__unit___4E88ABD4" Association="Self.FK__RawMateri__unit___4E88ABD4">
+            <End Role="UnitTypes" EntitySet="UnitTypes" />
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Recipes__materia__571DF1D5" Association="Self.FK__Recipes__materia__571DF1D5">
+            <End Role="RawMaterials" EntitySet="RawMaterials" />
+            <End Role="Recipes" EntitySet="Recipes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShipmentI__shipm__70DDC3D8" Association="Self.FK__ShipmentI__shipm__70DDC3D8">
+            <End Role="Shipments" EntitySet="Shipments" />
+            <End Role="ShipmentItems" EntitySet="ShipmentItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shipments__statu__6E01572D" Association="Self.FK__Shipments__statu__6E01572D">
+            <End Role="StatusTypes" EntitySet="StatusTypes" />
+            <End Role="Shipments" EntitySet="Shipments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BeverageFactoryModelContainer" CdmEntityContainer="BeverageFactoryEntities">
+          <EntitySetMapping Name="Authoes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Autho">
+              <MappingFragment StoreEntitySet="Autho">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="autho_id" ColumnName="autho_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialMovements">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.MaterialMovement">
+              <MappingFragment StoreEntitySet="MaterialMovements">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="material_id" ColumnName="material_id" />
+                <ScalarProperty Name="type_id" ColumnName="type_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MovementTypes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.MovementType">
+              <MappingFragment StoreEntitySet="MovementTypes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productions">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Production">
+              <MappingFragment StoreEntitySet="Production">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="good_quantity" ColumnName="good_quantity" />
+                <ScalarProperty Name="defect_quantity" ColumnName="defect_quantity" />
+                <ScalarProperty Name="production_date" ColumnName="production_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductionOrders">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.ProductionOrder">
+              <MappingFragment StoreEntitySet="ProductionOrders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="planned_quantity" ColumnName="planned_quantity" />
+                <ScalarProperty Name="actual_quantity" ColumnName="actual_quantity" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="created_date" ColumnName="created_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="type_id" ColumnName="type_id" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductStocks">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.ProductStock">
+              <MappingFragment StoreEntitySet="ProductStock">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="production_date" ColumnName="production_date" />
+                <ScalarProperty Name="expiry_date" ColumnName="expiry_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductTypes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.ProductType">
+              <MappingFragment StoreEntitySet="ProductTypes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RawMaterials">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.RawMaterial">
+              <MappingFragment StoreEntitySet="RawMaterials">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="current_stock" ColumnName="current_stock" />
+                <ScalarProperty Name="min_stock" ColumnName="min_stock" />
+                <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recipes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Recipe">
+              <MappingFragment StoreEntitySet="Recipes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="material_id" ColumnName="material_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShipmentItems">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.ShipmentItem">
+              <MappingFragment StoreEntitySet="ShipmentItems">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="shipment_id" ColumnName="shipment_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shipments">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Shipment">
+              <MappingFragment StoreEntitySet="Shipments">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="shipment_date" ColumnName="shipment_date" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusTypes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.StatusType">
+              <MappingFragment StoreEntitySet="StatusTypes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.Supplier">
+              <MappingFragment StoreEntitySet="Suppliers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="autho_id" ColumnName="autho_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnitTypes">
+            <EntityTypeMapping TypeName="BeverageFactoryModel.UnitType">
+              <MappingFragment StoreEntitySet="UnitTypes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
