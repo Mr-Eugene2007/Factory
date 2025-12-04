@@ -12,26 +12,22 @@ namespace WpfApp1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Supplier
+    public partial class Gender
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Supplier()
+        public Gender()
         {
-            this.RawMaterials = new HashSet<RawMaterial>();
+            this.Customers = new HashSet<Customer>();
+            this.Suppliers = new HashSet<Supplier>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
-        public string last_name { get; set; }
-        public string surname { get; set; }
-        public string phone { get; set; }
-        public string email { get; set; }
-        public Nullable<int> autho_id { get; set; }
-        public Nullable<int> gender_id { get; set; }
+        public string code { get; set; }
     
-        public virtual Autho Autho { get; set; }
-        public virtual Gender Gender { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RawMaterial> RawMaterials { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Supplier> Suppliers { get; set; }
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Models;
+using WpfApp1.Services;
 
 namespace WpfApp1.Pages
 {
@@ -21,28 +22,42 @@ namespace WpfApp1.Pages
     /// </summary>
     public partial class AuthoCustomer : Page
     {
-            public AuthoCustomer(Autho author, Customer customerData)
+        public AuthoCustomer(Autho author, Customer customerData)
+        {
+            InitializeComponent();
+
+            if (author != null && customerData != null)
             {
-                InitializeComponent();
-
-                if (author != null && customerData != null)
+                // Получаем гендер из базы данных
+                Gender gender = null;
+                using (var db = new BeverageFactoryEntities())
                 {
-                    // Формируем полное имя
-                    string fullName = $"{customerData.last_name} {customerData.name} {customerData.surname}".Replace("  ", " ").Trim();
+                    gender = db.Genders.FirstOrDefault(g => g.id == customerData.gender_id);
+                }
 
-                    // Обновляем текстовые блоки
-                    txtWelcome.Text = $"Добро пожаловать, {customerData.name}!";
-                    txtFullName.Text = fullName;
-                    txtEmail.Text = customerData.email ?? "Не указан";
-                    txtPhone.Text = customerData.phone ?? "Не указан";
-                }
-                else
-                {
-                    txtWelcome.Text = "Добро пожаловать!";
-                    txtFullName.Text = "Информация недоступна";
-                    txtEmail.Text = "Информация недоступна";
-                    txtPhone.Text = "Информация недоступна";
-                }
+                // Формируем полное имя с приставкой Mr/Mrs
+                string fullName = TimeHelper.GetFullNameWithGender(
+                    customerData.last_name,
+                    customerData.name,
+                    customerData.surname,
+                    gender
+                );
+
+                // Получаем полное приветствие с учетом времени суток и гендера
+                string greeting = TimeHelper.GetFullGreeting(
+                    customerData.last_name,
+                    customerData.name,
+                    customerData.surname,
+                    gender
+                );
+
+                // Обновляем текстовые блоки
+                txtWelcome.Text = greeting;
             }
+            else
+            {
+                txtWelcome.Text = "Добро пожаловать!";
+            }
+        }
     }
 }

@@ -19,6 +19,15 @@
     <Property Name="phone" Type="nvarchar" MaxLength="20" />
     <Property Name="email" Type="nvarchar" MaxLength="100" />
     <Property Name="autho_id" Type="int" />
+    <Property Name="gender_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="code" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="MaterialMovements">
     <Key>
@@ -146,6 +155,7 @@
     <Property Name="phone" Type="nvarchar" MaxLength="20" />
     <Property Name="email" Type="nvarchar" MaxLength="100" />
     <Property Name="autho_id" Type="int" />
+    <Property Name="gender_id" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -380,9 +390,34 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_customers_gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suppliers_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище BeverageFactoryModelContainer">
     <EntitySet Name="Autho" EntityType="Self.Autho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MaterialMovements" EntityType="Self.MaterialMovements" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MovementTypes" EntityType="Self.MovementTypes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Production" EntityType="Self.Production" Schema="dbo" store:Type="Tables" />
@@ -468,6 +503,14 @@
     </AssociationSet>
     <AssociationSet Name="FK__Suppliers__autho__46E78A0C" Association="Self.FK__Suppliers__autho__46E78A0C">
       <End Role="Autho" EntitySet="Autho" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_customers_gender" Association="Self.fk_customers_gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suppliers_Gender" Association="Self.FK_Suppliers_Gender">
+      <End Role="Gender" EntitySet="Gender" />
       <End Role="Suppliers" EntitySet="Suppliers" />
     </AssociationSet>
   </EntityContainer>

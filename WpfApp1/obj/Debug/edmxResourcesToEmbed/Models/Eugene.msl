@@ -20,6 +20,16 @@
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="autho_id" ColumnName="autho_id" />
+          <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="BeverageFactoryModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -160,6 +170,7 @@
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="autho_id" ColumnName="autho_id" />
+          <ScalarProperty Name="gender_id" ColumnName="gender_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

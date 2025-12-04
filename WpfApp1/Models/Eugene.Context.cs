@@ -27,6 +27,7 @@ namespace WpfApp1.Models
     
         public virtual DbSet<Autho> Authoes { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Gender> Genders { get; set; }
         public virtual DbSet<MaterialMovement> MaterialMovements { get; set; }
         public virtual DbSet<MovementType> MovementTypes { get; set; }
         public virtual DbSet<Production> Productions { get; set; }

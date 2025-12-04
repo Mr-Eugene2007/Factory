@@ -149,6 +149,12 @@ namespace WpfApp1.Pages
                     {
                         if (isPasswordValid)
                         {
+                            if (!CheckWorkingHoursForEmployee(author.id, db))
+                            {
+                                // Рабочее время не соблюдается, прерываем авторизацию
+                                return;
+                            }
+
                             MessageBox.Show("Вы успешно авторизовались!");
                             failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
 
@@ -181,6 +187,12 @@ namespace WpfApp1.Pages
                     {
                         if (isPasswordValid && txtBoxCaptcha.Text.Trim() == txtBlockCaptcha.Text)
                         {
+                            if (!CheckWorkingHoursForEmployee(author.id, db))
+                            {
+                                // Рабочее время не соблюдается, прерываем авторизацию
+                                return;
+                            }
+
                             MessageBox.Show("Вы успешно авторизовались!");
                             failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
 
@@ -237,6 +249,35 @@ namespace WpfApp1.Pages
                     }
                 }
             }
+        }
+
+        private bool CheckWorkingHoursForEmployee(int authoId, BeverageFactoryEntities db)
+        {
+            // Проверяем, является ли пользователь сотрудником (Customer или Supplier)
+            var isCustomer = db.Customers.Any(c => c.autho_id == authoId);
+            var isSupplier = db.Suppliers.Any(s => s.autho_id == authoId);
+
+            // Если это не сотрудник (ни Customer, ни Supplier), разрешаем доступ в любое время
+            if (!isCustomer && !isSupplier)
+            {
+                return true;
+            }
+
+            // Если это сотрудник, проверяем рабочее время
+            if (!TimeHelper.IsWithinWorkingHours())
+            {
+                MessageBox.Show(
+                    $"Доступ к системе разрешен только в рабочее время (с 10:00 до 19:00).\n" +
+                    $"Текущее время: {DateTime.Now:HH:mm}\n" +
+                    $"Пожалуйста, обратитесь в систему в рабочее время.",
+                    "Доступ запрещен",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Warning
+                );
+                return false;
+            }
+
+            return true;
         }
 
         private void LoadPage(string role, Autho author, dynamic userData)

@@ -89,6 +89,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Eugene.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Gender.cs">
+      <DependentUpon>Eugene.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MaterialMovement.cs">
       <DependentUpon>Eugene.tt</DependentUpon>
     </Compile>
@@ -142,6 +145,7 @@
     </Compile>
     <Compile Include="Services\CaptchaGenerator.cs" />
     <Compile Include="Services\Hash.cs" />
+    <Compile Include="Services\TimeHelper.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -223,8 +227,8 @@
   <ItemGroup>
     <Content Include="Models\Eugene.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Eugene.Context.cs</LastGenOutput>
       <DependentUpon>Eugene.edmx</DependentUpon>
+      <LastGenOutput>Eugene.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Eugene.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

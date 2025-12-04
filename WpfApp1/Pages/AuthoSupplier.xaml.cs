@@ -13,12 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Models;
+using WpfApp1.Services;
 
 namespace WpfApp1.Pages
 {
     /// <summary>
     /// Логика взаимодействия для AuthoSupplier.xaml
     /// </summary>
+
     public partial class AuthoSupplier : Page
     {
         public AuthoSupplier(Autho author, Supplier supplierData)
@@ -27,21 +29,35 @@ namespace WpfApp1.Pages
 
             if (author != null && supplierData != null)
             {
-                // Формируем полное имя
-                string fullName = $"{supplierData.last_name} {supplierData.name} {supplierData.surname}".Replace("  ", " ").Trim();
+                // Получаем гендер из базы данных
+                Gender gender = null;
+                using (var db = new BeverageFactoryEntities())
+                {
+                    gender = db.Genders.FirstOrDefault(g => g.id == supplierData.gender_id);
+                }
+
+                // Формируем полное имя с приставкой Mr/Mrs
+                string fullName = TimeHelper.GetFullNameWithGender(
+                    supplierData.last_name,
+                    supplierData.name,
+                    supplierData.surname,
+                    gender
+                );
+
+                // Получаем полное приветствие с учетом времени суток и гендера
+                string greeting = TimeHelper.GetFullGreeting(
+                    supplierData.last_name,
+                    supplierData.name,
+                    supplierData.surname,
+                    gender
+                );
 
                 // Обновляем текстовые блоки
-                txtWelcome.Text = $"Добро пожаловать, {supplierData.name}!";
-                txtFullName.Text = fullName;
-                txtEmail.Text = supplierData.email ?? "Не указан";
-                txtPhone.Text = supplierData.phone ?? "Не указан";
+                txtWelcome.Text = greeting;
             }
             else
             {
                 txtWelcome.Text = "Добро пожаловать!";
-                txtFullName.Text = "Информация недоступна";
-                txtEmail.Text = "Информация недоступна";
-                txtPhone.Text = "Информация недоступна";
             }
         }
     }

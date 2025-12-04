@@ -10,35 +10,12 @@
 
     <Grid>
         <Border Background="White" Padding="20" CornerRadius="10" BorderBrush="Gray" BorderThickness="1"
-            HorizontalAlignment="Center" VerticalAlignment="Center">
+                HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel>
                 <TextBlock x:Name="txtWelcome" Text="Добро пожаловать!" 
-                      FontSize="24" FontWeight="Bold" 
-                      Foreground="DarkBlue" HorizontalAlignment="Center" 
-                      Margin="0,0,0,20"/>
-
-                <Border Background="LightGray" Padding="15" CornerRadius="5" Margin="0,0,0,10">
-                    <StackPanel>
-                        <TextBlock Text="Информация о поставщике:" 
-                              FontSize="16" FontWeight="SemiBold" 
-                              Margin="0,0,0,10"/>
-
-                        <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <TextBlock Text="ФИО:" FontWeight="Bold" Width="80"/>
-                            <TextBlock x:Name="txtFullName" Text="Не указано"/>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <TextBlock Text="Email:" FontWeight="Bold" Width="80"/>
-                            <TextBlock x:Name="txtEmail" Text="Не указан"/>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Margin="0,5">
-                            <TextBlock Text="Телефон:" FontWeight="Bold" Width="80"/>
-                            <TextBlock x:Name="txtPhone" Text="Не указан"/>
-                        </StackPanel>
-                    </StackPanel>
-                </Border>
+                          FontSize="24" FontWeight="Bold" 
+                          Foreground="DarkGreen" HorizontalAlignment="Center" 
+                          Margin="0,0,0,20"/>
             </StackPanel>
         </Border>
     </Grid>
