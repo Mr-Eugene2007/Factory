@@ -15,6 +15,7 @@ namespace WpfApp1.Models
     
     public partial class BeverageFactoryEntities : DbContext
     {
+        private static BeverageFactoryEntities context;
         public BeverageFactoryEntities()
             : base("name=BeverageFactoryEntities")
         {
@@ -43,5 +44,12 @@ namespace WpfApp1.Models
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<UnitType> UnitTypes { get; set; }
+
+        public static BeverageFactoryEntities GetContext()
+        {
+            if (context == null)
+                context = new BeverageFactoryEntities();
+            return context;
+        }
     }
 }

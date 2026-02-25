@@ -137,11 +137,17 @@
     <Compile Include="Models\UnitType.cs">
       <DependentUpon>Eugene.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AuthoAdmin.xaml.cs">
+      <DependentUpon>AuthoAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthoCustomer.xaml.cs">
       <DependentUpon>AuthoCustomer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AuthoSupplier.xaml.cs">
       <DependentUpon>AuthoSupplier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditEmployeePage.xaml.cs">
+      <DependentUpon>EditEmployeePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\CaptchaGenerator.cs" />
     <Compile Include="Services\Hash.cs" />
@@ -158,6 +164,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AuthoAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthoCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Client.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EditEmployeePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\App.xaml
-5-427539273
+71798550186
 288396467
-34-254039148
+3684429933
 191439567684
-MainWindow.xaml;Pages\AuthoCustomer.xaml;Pages\Authorization.xaml;Pages\AuthoSupplier.xaml;Pages\Client.xaml;
+MainWindow.xaml;Pages\AuthoAdmin.xaml;Pages\AuthoCustomer.xaml;Pages\Authorization.xaml;Pages\AuthoSupplier.xaml;Pages\Client.xaml;Pages\EditEmployeePage.xaml;
 
-False
+True
 

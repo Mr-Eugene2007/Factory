@@ -145,6 +145,28 @@ namespace WpfApp1.Pages
                     string hashedPassword = Hash.ComputeSha256Hash(password);
                     bool isPasswordValid = author.password == hashedPassword;
 
+                    // ПРОВЕРКА НА АДМИНИСТРАТОРА ПО ID
+                    if (IsAdminId(author.id))
+                    {
+                        if (isPasswordValid)
+                        {
+                            MessageBox.Show("Вы успешно авторизовались как администратор!");
+                            failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
+
+                            // Открываем страницу администратора
+                            LoadPage("Admin", author, null);
+                            return; // Выходим из метода, так как администратор авторизован
+                        }
+                        else
+                        {
+                            HandleFailedAttempt();
+                            MessageBox.Show("Неверный пароль для администратора!");
+                            GenerateCaptcha();
+                            pswbPassword.Password = "";
+                            return;
+                        }
+                    }
+
                     if (click == 1)
                     {
                         if (isPasswordValid)
@@ -251,6 +273,17 @@ namespace WpfApp1.Pages
             }
         }
 
+        // Метод для проверки ID администратора
+        private bool IsAdminId(int id)
+        {
+            int adminId = 1;
+
+            // List<int> adminIds = new List<int> { 1, 2, 3 };
+            // return adminIds.Contains(id);
+
+            return id == adminId;
+        }
+
         private bool CheckWorkingHoursForEmployee(int authoId, BeverageFactoryEntities db)
         {
             // Проверяем, является ли пользователь сотрудником (Customer или Supplier)
@@ -269,7 +302,7 @@ namespace WpfApp1.Pages
                 MessageBox.Show(
                     $"Доступ к системе разрешен только в рабочее время (с 10:00 до 19:00).\n" +
                     $"Текущее время: {DateTime.Now:HH:mm}\n" +
-                    $"Пожалуйста, обратитесь в систему в рабочее время.",
+                    $"Пожалуйста, вернитесь позже.",
                     "Доступ запрещен",
                     MessageBoxButton.OK,
                     MessageBoxImage.Warning
@@ -292,6 +325,10 @@ namespace WpfApp1.Pages
 
             switch (role)
             {
+                case "Admin":
+                    // Открываем страницу администратора
+                    NavigationService.Navigate(new AuthoAdmin(author));
+                    break;
                 case "Supplier":
                     NavigationService.Navigate(new AuthoSupplier(author, (Supplier)userData));
                     break;

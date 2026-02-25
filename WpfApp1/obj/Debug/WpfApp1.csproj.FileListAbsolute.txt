@@ -70,3 +70,7 @@ C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoCustomer.g.cs
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoSupplier.g.cs
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoCustomer.baml
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoSupplier.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoAdmin.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\AuthoAdmin.baml
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\EditEmployeePage.g.cs
+C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\EditEmployeePage.baml
