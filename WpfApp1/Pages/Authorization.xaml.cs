@@ -278,8 +278,6 @@ namespace WpfApp1.Pages
         {
             int adminId = 1;
 
-            // List<int> adminIds = new List<int> { 1, 2, 3 };
-            // return adminIds.Contains(id);
 
             return id == adminId;
         }

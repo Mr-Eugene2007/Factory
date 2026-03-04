@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\velts\\Desktop\\WpfApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\editemployeepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\editemployeepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|c:\\users\\velts\\desktop\\wpfapp1\\wpfapp1\\pages\\editemployeepage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\editemployeepage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\editemployeepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\editemployeepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\viewmodels\\employeeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\viewmodels\\employeeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\eugene.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\eugene.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\validation\\customervalidationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\validation\\customervalidationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\validation\\suppliervalidationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\validation\\suppliervalidationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\validators\\suppliervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\validators\\suppliervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\validators\\customervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\validators\\customervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authoadmin.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
@@ -19,16 +47,40 @@
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authoadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authorization.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authorization.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\authoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\authoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\hash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authorization.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authorization.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\captchagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\captchagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\autho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\autho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authorization.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\eugene.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +95,8 @@
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\client.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\models\\eugene.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\models\\eugene.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authocustomer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authocustomer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\timehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authosupplier.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -61,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\pages\\authocustomer.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\pages\\authocustomer.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|C:\\Users\\velts\\Desktop\\WpfApp1\\wpfapp1\\services\\captchagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB39EB2D-970B-4C29-B170-E12E8D964356}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\services\\captchagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,47 +114,131 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditEmployeePage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
-              "RelativeToolTip": "WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFACAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T10:47:15.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthoAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
-              "RelativeToolTip": "WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAJAAAAAAAAAA==",
+              "Title": "EmployeeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\ViewModels\\EmployeeViewModel.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\ViewModels\\EmployeeViewModel.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\ViewModels\\EmployeeViewModel.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\ViewModels\\EmployeeViewModel.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T05:57:04.606Z"
+              "WhenOpened": "2026-02-27T10:06:57.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EditEmployeePage.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\EditEmployeePage.xaml",
               "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml",
               "RelativeToolTip": "WpfApp1\\Pages\\EditEmployeePage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-21T10:46:38.039Z"
+              "WhenOpened": "2026-01-21T10:46:38.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditEmployeePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Pages\\EditEmployeePage.xaml.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAYwKAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T10:47:15.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SupplierValidator.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Validators\\SupplierValidator.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Validators\\SupplierValidator.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Validators\\SupplierValidator.cs",
+              "RelativeToolTip": "WpfApp1\\Validators\\SupplierValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:39:21.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomerValidator.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Validators\\CustomerValidator.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Validators\\CustomerValidator.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Validators\\CustomerValidator.cs",
+              "RelativeToolTip": "WpfApp1\\Validators\\CustomerValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:39:10.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerValidationModel.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Validation\\CustomerValidationModel.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Validation\\CustomerValidationModel.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Validation\\CustomerValidationModel.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\Validation\\CustomerValidationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:38:18.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SupplierValidationModel.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Validation\\SupplierValidationModel.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Validation\\SupplierValidationModel.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Validation\\SupplierValidationModel.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\Validation\\SupplierValidationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:38:43.634Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Eugene.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Eugene.edmx",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Eugene.edmx",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Eugene.edmx [Diagram1]",
+              "RelativeToolTip": "WpfApp1\\Models\\Eugene.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-01-21T09:56:03.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "WpfApp1\\Services\\EmployeeService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAYwDQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:07:12.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthoAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Pages\\AuthoAdmin.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T05:57:04.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AuthoAdmin.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoAdmin.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoAdmin.xaml",
@@ -125,19 +249,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
+              "Title": "AuthoService.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\AuthoService.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Services\\AuthoService.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\AuthoService.cs",
+              "RelativeToolTip": "WpfApp1\\Services\\AuthoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:07:24.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Supplier.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\Supplier.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T10:30:37.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Hash.cs",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\Hash.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Services\\Hash.cs",
               "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\Hash.cs",
               "RelativeToolTip": "WpfApp1\\Services\\Hash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T10:47:37.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
+              "Title": "Authorization.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Authorization.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Pages\\Authorization.xaml.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Authorization.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\Pages\\Authorization.xaml.cs",
+              "ViewState": "AgIAADoBAAAAAAAAAADwvxcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:24:41.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Customer.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\Customer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T09:32:09.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TimeHelper.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\TimeHelper.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Services\\TimeHelper.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\TimeHelper.cs",
+              "RelativeToolTip": "WpfApp1\\Services\\TimeHelper.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T13:34:54.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CaptchaGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\CaptchaGenerator.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Services\\CaptchaGenerator.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\CaptchaGenerator.cs",
+              "RelativeToolTip": "WpfApp1\\Services\\CaptchaGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:26:40.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Autho.cs",
+              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Autho.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Models\\Autho.cs",
+              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Autho.cs",
+              "RelativeToolTip": "WpfApp1\\Models\\Autho.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T09:42:54.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Client.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Client.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\Client.xaml",
@@ -148,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "Eugene.Context.cs",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Eugene.Context.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Models\\Eugene.Context.cs",
@@ -160,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "AuthoSupplier.xaml.cs",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoSupplier.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoSupplier.xaml.cs",
@@ -172,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "Authorization.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Authorization.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\Authorization.xaml",
@@ -183,30 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Authorization.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Authorization.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Pages\\Authorization.xaml.cs",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\Authorization.xaml.cs",
-              "RelativeToolTip": "WpfApp1\\Pages\\Authorization.xaml.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAwwFcBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T12:24:41.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Eugene.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Eugene.edmx",
-              "RelativeDocumentMoniker": "WpfApp1\\Models\\Eugene.edmx",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Models\\Eugene.edmx [Diagram1]",
-              "RelativeToolTip": "WpfApp1\\Models\\Eugene.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2026-01-21T09:56:03.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "AuthoCustomer.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoCustomer.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoCustomer.xaml",
@@ -217,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "AuthoCustomer.xaml.cs",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoCustomer.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoCustomer.xaml.cs",
@@ -229,19 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TimeHelper.cs",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\TimeHelper.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Services\\TimeHelper.cs",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\TimeHelper.cs",
-              "RelativeToolTip": "WpfApp1\\Services\\TimeHelper.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T13:34:54.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 24,
               "Title": "AuthoSupplier.xaml",
               "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Pages\\AuthoSupplier.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\Pages\\AuthoSupplier.xaml",
@@ -249,18 +422,6 @@
               "RelativeToolTip": "WpfApp1\\Pages\\AuthoSupplier.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-04T13:57:30.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CaptchaGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\CaptchaGenerator.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\Services\\CaptchaGenerator.cs",
-              "ToolTip": "C:\\Users\\velts\\Desktop\\WpfApp1\\WpfApp1\\Services\\CaptchaGenerator.cs",
-              "RelativeToolTip": "WpfApp1\\Services\\CaptchaGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T12:26:40.788Z"
             }
           ]
         }

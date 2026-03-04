@@ -137,6 +137,9 @@
     <Compile Include="Models\UnitType.cs">
       <DependentUpon>Eugene.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Validation\CustomerValidationModel.cs" />
+    <Compile Include="Models\Validation\SupplierValidationModel.cs" />
+    <Compile Include="Models\ViewModels\EmployeeViewModel.cs" />
     <Compile Include="Pages\AuthoAdmin.xaml.cs">
       <DependentUpon>AuthoAdmin.xaml</DependentUpon>
     </Compile>
@@ -149,9 +152,13 @@
     <Compile Include="Pages\EditEmployeePage.xaml.cs">
       <DependentUpon>EditEmployeePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\AuthoService.cs" />
     <Compile Include="Services\CaptchaGenerator.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\Hash.cs" />
     <Compile Include="Services\TimeHelper.cs" />
+    <Compile Include="Validators\CustomerValidator.cs" />
+    <Compile Include="Validators\SupplierValidator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

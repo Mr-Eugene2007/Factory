@@ -269,17 +269,6 @@ namespace WpfApp1.Pages
             _context?.Dispose();
         }
 
-        // Обработчик для обновления при возвращении на страницу
-        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            if (IsVisible)
-            {
-                // Обновляем контекст при повторном отображении страницы
-                _context?.Dispose();
-                _context = new BeverageFactoryEntities();
-                LoadEmployeesData();
-            }
-        }
 
         public class EmployeeViewModel
         {

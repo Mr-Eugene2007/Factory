@@ -51,7 +51,7 @@
                                  IsChecked="{Binding IsSupplier}"
                                  GroupName="EmployeeType"
                                  Margin="5"
-                                 VerticalAlignment="Center"/>
+                                 VerticalAlignment="Center" Checked="rbSupplier_Checked"/>
                     <RadioButton x:Name="rbCustomer" 
                                  Content="Клиент" 
                                  IsChecked="{Binding IsCustomer}"
@@ -84,7 +84,7 @@
                 <!-- Телефон -->
                 <TextBlock Grid.Row="4" Grid.Column="0" Text="Телефон:" 
                            Margin="5" VerticalAlignment="Center"/>
-                <TextBox x:Name="txtPhone" Grid.Row="4" Grid.Column="1" 
+                <TextBox x:Name="txtPhone" Grid.Row="4" Grid.Column="1" TextChanged="txtPhone_TextChanged"
                          Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
                          Margin="5" Height="25" VerticalContentAlignment="Center"/>
 
@@ -93,7 +93,7 @@
                            Margin="5" VerticalAlignment="Center"/>
                 <TextBox x:Name="txtEmail" Grid.Row="5" Grid.Column="1" 
                          Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"
-                         Margin="5" Height="25" VerticalContentAlignment="Center"/>
+                         Margin="5" Height="25" VerticalContentAlignment="Center" PreviewTextInput="txtEmail_PreviewTextInput"/>
 
                 <!-- Доступ к системе -->
                 <CheckBox x:Name="chkSystemAccess" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
@@ -114,14 +114,14 @@
                            Margin="5" VerticalAlignment="Center"/>
                 <PasswordBox x:Name="txtPassword" Grid.Row="8" Grid.Column="1" 
                              Margin="5" Height="25" VerticalContentAlignment="Center"
-                             IsEnabled="{Binding HasSystemAccess}"/>
+                             IsEnabled="{Binding HasSystemAccess}" PasswordChanged="txtPassword_PasswordChanged"/>
 
                 <!-- Подтверждение пароля -->
                 <TextBlock Grid.Row="9" Grid.Column="0" Text="Подтверждение:" 
                            Margin="5" VerticalAlignment="Center"/>
                 <PasswordBox x:Name="txtPasswordConfirm" Grid.Row="9" Grid.Column="1" 
                              Margin="5" Height="25" VerticalContentAlignment="Center"
-                             IsEnabled="{Binding HasSystemAccess}"/>
+                             IsEnabled="{Binding HasSystemAccess}" PasswordChanged="txtPassword_PasswordChanged"/>
             </Grid>
         </ScrollViewer>
 
