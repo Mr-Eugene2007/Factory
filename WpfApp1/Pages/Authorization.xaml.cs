@@ -27,6 +27,10 @@ namespace WpfApp1.Pages
         int failedAttempts;
         DispatcherTimer blockTimer;
         int blockTimeRemaining;
+        private string recoveryCode;
+        private string recoveryLogin;
+        private string twoFactorCode;
+        private Autho twoFactorUser;
 
         public Authorization()
         {
@@ -119,7 +123,6 @@ namespace WpfApp1.Pages
 
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
-            // Проверяем, не заблокирован ли интерфейс
             if (!btnEnter.IsEnabled)
                 return;
 
@@ -127,7 +130,6 @@ namespace WpfApp1.Pages
             string login = txtLogin.Text.Trim();
             string password = pswbPassword.Password.Trim();
 
-            // Проверяем, что поля не пустые
             if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Введите логин и пароль!");
@@ -136,26 +138,49 @@ namespace WpfApp1.Pages
 
             using (var db = new BeverageFactoryEntities())
             {
-                // Находим пользователя по логину
-                var author = db.Authoes.Where(x => x.login == login).FirstOrDefault();
+                var author = db.Authoes.FirstOrDefault(x => x.login == login);
 
                 if (author != null)
                 {
-                    // Хэшируем введенный пароль и сравниваем с хэшем в базе
                     string hashedPassword = Hash.ComputeSha256Hash(password);
                     bool isPasswordValid = author.password == hashedPassword;
 
-                    // ПРОВЕРКА НА АДМИНИСТРАТОРА ПО ID
+                    // --- АДМИН ---
                     if (IsAdminId(author.id))
                     {
                         if (isPasswordValid)
                         {
-                            MessageBox.Show("Вы успешно авторизовались как администратор!");
-                            failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
+                            // Если хочешь 2FA и для админа — используем тот же GetEmailForUser
+                            string email = GetEmailForUser(author.id);
+                            if (email == null)
+                            {
+                                // Нет email → просто входим без 2FA
+                                MessageBox.Show("Вы успешно авторизовались как администратор!");
+                                failedAttempts = 0;
+                                LoadPage("Admin", author, null);
+                                return;
+                            }
 
-                            // Открываем страницу администратора
+                            twoFactorCode = new Random().Next(1000, 9999).ToString();
+                            twoFactorUser = author;
+
+                            new EmailService().SendCode(email, twoFactorCode);
+
+                            MessageBox.Show("На вашу почту отправлен код подтверждения!");
+
+                            var wnd = new TwoFactorWindow(twoFactorCode);
+                            wnd.ShowDialog();
+
+                            if (!wnd.IsConfirmed)
+                            {
+                                MessageBox.Show("Код неверный!");
+                                return;
+                            }
+
+                            MessageBox.Show("Вы успешно авторизовались как администратор!");
+                            failedAttempts = 0;
                             LoadPage("Admin", author, null);
-                            return; // Выходим из метода, так как администратор авторизован
+                            return;
                         }
                         else
                         {
@@ -167,35 +192,49 @@ namespace WpfApp1.Pages
                         }
                     }
 
+                    // --- ПЕРВАЯ ПОПЫТКА ---
                     if (click == 1)
                     {
                         if (isPasswordValid)
                         {
                             if (!CheckWorkingHoursForEmployee(author.id, db))
+                                return;
+
+                            string email = GetEmailForUser(author.id);
+                            if (email == null)
                             {
-                                // Рабочее время не соблюдается, прерываем авторизацию
+                                MessageBox.Show("Для вашей учетной записи не указан email. 2FA недоступна.");
+                                return;
+                            }
+
+                            twoFactorCode = new Random().Next(1000, 9999).ToString();
+                            twoFactorUser = author;
+
+                            new EmailService().SendCode(email, twoFactorCode);
+
+                            MessageBox.Show("На вашу почту отправлен код подтверждения!");
+
+                            var wnd = new TwoFactorWindow(twoFactorCode);
+                            wnd.ShowDialog();
+
+                            if (!wnd.IsConfirmed)
+                            {
+                                MessageBox.Show("Код неверный!");
                                 return;
                             }
 
                             MessageBox.Show("Вы успешно авторизовались!");
-                            failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
+                            failedAttempts = 0;
 
-                            // Проверяем, является ли пользователь поставщиком или клиентом
                             var supplier = db.Suppliers.FirstOrDefault(s => s.autho_id == author.id);
                             var customer = db.Customers.FirstOrDefault(c => c.autho_id == author.id);
 
                             if (supplier != null)
-                            {
                                 LoadPage("Supplier", author, supplier);
-                            }
                             else if (customer != null)
-                            {
                                 LoadPage("Customer", author, customer);
-                            }
                             else
-                            {
                                 NavigationService.Navigate(new Client());
-                            }
                         }
                         else
                         {
@@ -205,34 +244,49 @@ namespace WpfApp1.Pages
                             pswbPassword.Password = "";
                         }
                     }
+                    // --- ПОВТОРНЫЕ ПОПЫТКИ (С КАПЧЕЙ) ---
                     else if (click > 1)
                     {
                         if (isPasswordValid && txtBoxCaptcha.Text.Trim() == txtBlockCaptcha.Text)
                         {
                             if (!CheckWorkingHoursForEmployee(author.id, db))
+                                return;
+
+                            string email = GetEmailForUser(author.id);
+                            if (email == null)
                             {
-                                // Рабочее время не соблюдается, прерываем авторизацию
+                                MessageBox.Show("Для вашей учетной записи не указан email. 2FA недоступна.");
+                                return;
+                            }
+
+                            twoFactorCode = new Random().Next(1000, 9999).ToString();
+                            twoFactorUser = author;
+
+                            new EmailService().SendCode(email, twoFactorCode);
+
+                            MessageBox.Show("На вашу почту отправлен код подтверждения!");
+
+                            var wnd = new TwoFactorWindow(twoFactorCode);
+                            wnd.ShowDialog();
+
+                            if (!wnd.IsConfirmed)
+                            {
+                                MessageBox.Show("Код неверный!");
                                 return;
                             }
 
                             MessageBox.Show("Вы успешно авторизовались!");
-                            failedAttempts = 0; // Сбрасываем счетчик при успешной авторизации
+                            failedAttempts = 0;
 
                             var supplier = db.Suppliers.FirstOrDefault(s => s.autho_id == author.id);
                             var customer = db.Customers.FirstOrDefault(c => c.autho_id == author.id);
 
                             if (supplier != null)
-                            {
                                 LoadPage("Supplier", author, supplier);
-                            }
                             else if (customer != null)
-                            {
                                 LoadPage("Customer", author, customer);
-                            }
                             else
-                            {
                                 NavigationService.Navigate(new Client());
-                            }
                         }
                         else
                         {
@@ -311,6 +365,8 @@ namespace WpfApp1.Pages
             return true;
         }
 
+
+
         private void LoadPage(string role, Autho author, dynamic userData)
         {
             click = 0;
@@ -338,5 +394,77 @@ namespace WpfApp1.Pages
                     break;
             }
         }
+
+        private void btnForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+            panelRecovery.Visibility = Visibility.Visible;
+        }
+        private void btnSendRecoveryCode_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string login = txtRecoveryLogin.Text.Trim();
+                string email = txtRecoveryEmail.Text.Trim();
+
+                if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(email))
+                {
+                    MessageBox.Show("Введите логин и email!");
+                    return;
+                }
+
+                using (var db = new BeverageFactoryEntities())
+                {
+                    var user = db.Authoes.FirstOrDefault(u => u.login == login);
+
+                    if (user == null)
+                    {
+                        MessageBox.Show("Пользователь с таким логином не найден!");
+                        return;
+                    }
+
+                    recoveryLogin = user.login;
+                    recoveryCode = new Random().Next(1000, 9999).ToString();
+
+                    new EmailService().SendCode(email, recoveryCode);
+
+                    MessageBox.Show("Код отправлен на указанную почту!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка: " + ex.Message);
+            }
+        }
+
+        private void btnConfirmRecoveryCode_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtRecoveryCode.Text.Trim() == recoveryCode)
+            {
+                var wnd = new NewPasswordWindow(recoveryLogin);
+                wnd.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Код неверный!");
+            }
+        }
+
+
+        private string GetEmailForUser(int authoId)
+        {
+            using (var db = new BeverageFactoryEntities())
+            {
+                var supplier = db.Suppliers.FirstOrDefault(s => s.autho_id == authoId);
+                if (supplier != null)
+                    return supplier.email;
+
+                var customer = db.Customers.FirstOrDefault(c => c.autho_id == authoId);
+                if (customer != null)
+                    return customer.email;
+
+                return null; // у админа email нет
+            }
+        }
+
     }
 }

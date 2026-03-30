@@ -14,11 +14,9 @@ namespace WpfApp1.Models.Validation
         public string surname { get; set; }
 
         [Required(ErrorMessage = "Телефон обязателен.")]
-        [Phone(ErrorMessage = "Некорректный формат телефона.")]
         public string phone { get; set; }
 
         [Required(ErrorMessage = "Email обязателен.")]
-        [EmailAddress(ErrorMessage = "Некорректный email.")]
         public string email { get; set; }
     }
 }

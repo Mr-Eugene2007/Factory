@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\App.xaml
-71798550186
+91181936362
 288396467
-42-2031497439
+45-1241627770
 191439567684
-MainWindow.xaml;Pages\AuthoAdmin.xaml;Pages\AuthoCustomer.xaml;Pages\Authorization.xaml;Pages\AuthoSupplier.xaml;Pages\Client.xaml;Pages\EditEmployeePage.xaml;
+MainWindow.xaml;Pages\AuthoAdmin.xaml;Pages\AuthoCustomer.xaml;Pages\Authorization.xaml;Pages\AuthoSupplier.xaml;Pages\Client.xaml;Pages\EditEmployeePage.xaml;Pages\NewPasswordWindow.xaml;Pages\TwoFactorWindow.xaml;
 
 False
 

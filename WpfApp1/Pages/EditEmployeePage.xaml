@@ -51,7 +51,7 @@
                                  IsChecked="{Binding IsSupplier}"
                                  GroupName="EmployeeType"
                                  Margin="5"
-                                 VerticalAlignment="Center" Checked="rbSupplier_Checked"/>
+                                 VerticalAlignment="Center"/>
                     <RadioButton x:Name="rbCustomer" 
                                  Content="Клиент" 
                                  IsChecked="{Binding IsCustomer}"

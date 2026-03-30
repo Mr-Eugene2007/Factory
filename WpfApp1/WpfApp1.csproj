@@ -152,8 +152,15 @@
     <Compile Include="Pages\EditEmployeePage.xaml.cs">
       <DependentUpon>EditEmployeePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NewPasswordWindow.xaml.cs">
+      <DependentUpon>NewPasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TwoFactorWindow.xaml.cs">
+      <DependentUpon>TwoFactorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\AuthoService.cs" />
     <Compile Include="Services\CaptchaGenerator.cs" />
+    <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\Hash.cs" />
     <Compile Include="Services\TimeHelper.cs" />
@@ -192,6 +199,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\EditEmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewPasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TwoFactorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
