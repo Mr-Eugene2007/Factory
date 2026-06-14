@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\App.xaml
 101316415550
 288396467
-46135697686
+47-1946390932
 19-1575889254
 MainWindow.xaml;Pages\AuthoAdmin.xaml;Pages\AuthoCustomer.xaml;Pages\Authorization.xaml;Pages\AuthoSupplier.xaml;Pages\Client.xaml;Pages\EditEmployeePage.xaml;Pages\NewPasswordWindow.xaml;Pages\ProductionOrderPage.xaml;Pages\TwoFactorWindow.xaml;
 
-False
+True
 

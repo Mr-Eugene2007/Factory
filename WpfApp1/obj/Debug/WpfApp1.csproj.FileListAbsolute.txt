@@ -78,3 +78,44 @@ C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\NewPasswordWindow.baml
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\TwoFactorWindow.baml
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\NewPasswordWindow.g.cs
 C:\Users\velts\Desktop\WpfApp1\WpfApp1\obj\Debug\Pages\TwoFactorWindow.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\EntityFramework.dll
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\EntityFramework.xml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.exe.config
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\NewPasswordWindow.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\ProductionOrderPage.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\TwoFactorWindow.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoAdmin.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoCustomer.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\Authorization.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoSupplier.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\Client.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\EditEmployeePage.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\NewPasswordWindow.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\ProductionOrderPage.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\TwoFactorWindow.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\App.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1_Content.g.cs
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\App.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoAdmin.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoCustomer.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\Authorization.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\AuthoSupplier.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\Client.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\Pages\EditEmployeePage.baml
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.csproj.Up2Date
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\velts\OneDrive\Рабочий стол\Factory\WpfApp1\obj\Debug\WpfApp1.pdb

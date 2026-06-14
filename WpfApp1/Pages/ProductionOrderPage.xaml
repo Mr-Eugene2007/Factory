@@ -1,0 +1,219 @@
+﻿<Page x:Class="WpfApp1.Pages.ProductionOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Производственный заказ">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <!-- Выбор заказа -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0"
+                    VerticalAlignment="Center" Margin="10">
+            <TextBlock Text="Производственный заказ №:"
+                       VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="cmbOrders" Width="250"
+                      SelectionChanged="cmbOrders_SelectionChanged"/>
+        </StackPanel>
+
+        <!-- Документ -->
+        <FlowDocumentReader x:Name="flowDocumentReader"
+                            Grid.Row="1" ViewingMode="Scroll">
+            <FlowDocument PageWidth="720" PagePadding="50">
+
+                <!-- Шапка -->
+                <Paragraph FontSize="10" TextAlignment="Right" Foreground="Gray">
+                    ООО «BeverageFactory»
+                </Paragraph>
+
+                <Paragraph FontSize="20" FontWeight="Bold"
+                           TextAlignment="Center" Margin="0,10,0,4">
+                    Производственный заказ
+                </Paragraph>
+
+                <!-- Реквизиты заказа -->
+                <BlockUIContainer>
+                    <Border BorderBrush="#CCCCCC" BorderThickness="1"
+                            CornerRadius="4" Padding="12" Margin="0,6,0,10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition Height="28"/>
+                                <RowDefinition Height="28"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0"
+                                       Text="Номер заказа:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtOrderId"
+                                       Grid.Row="0" Grid.Column="1"/>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2"
+                                       Text="Дата создания:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtCreatedDate"
+                                       Grid.Row="0" Grid.Column="3"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0"
+                                       Text="Напиток:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtProductName"
+                                       Grid.Row="1" Grid.Column="1"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="2"
+                                       Text="Тип продукта:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtProductType"
+                                       Grid.Row="1" Grid.Column="3"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0"
+                                       Text="Плановое кол-во:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtPlannedQty"
+                                       Grid.Row="2" Grid.Column="1"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="2"
+                                       Text="Фактическое кол-во:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtActualQty"
+                                       Grid.Row="2" Grid.Column="3"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="0"
+                                       Text="Статус:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtStatus"
+                                       Grid.Row="3" Grid.Column="1"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="2"
+                                       Text="Приоритет:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtPriority"
+                                       Grid.Row="3" Grid.Column="3"/>
+                        </Grid>
+                    </Border>
+                </BlockUIContainer>
+
+                <!-- Даты -->
+                <BlockUIContainer>
+                    <Border BorderBrush="#CCCCCC" BorderThickness="1"
+                            CornerRadius="4" Padding="12" Margin="0,0,0,10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0"
+                                       Text="Дата начала:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtStartDate"
+                                       Grid.Row="0" Grid.Column="1"/>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2"
+                                       Text="Дата окончания:" FontWeight="Bold"/>
+                            <TextBlock x:Name="txtEndDate"
+                                       Grid.Row="0" Grid.Column="3"/>
+                        </Grid>
+                    </Border>
+                </BlockUIContainer>
+
+                <!-- Таблица сырья по рецепту -->
+                <Paragraph FontSize="13" FontWeight="Bold" Margin="0,5,0,5">
+                    Необходимое сырьё (по рецепту):
+                </Paragraph>
+
+                <BlockUIContainer>
+                    <DataGrid x:Name="dgRecipe"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              CanUserAddRows="False"
+                              HeadersVisibility="Column"
+                              GridLinesVisibility="All"
+                              BorderBrush="#AAAAAA" BorderThickness="1"
+                              RowHeight="30">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#E3F2FD"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Padding" Value="6,4"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№"
+                                Binding="{Binding LineNumber}" Width="40"/>
+                            <DataGridTextColumn Header="Сырьё / Ингредиент"
+                                Binding="{Binding MaterialName}" Width="*"/>
+                            <DataGridTextColumn Header="Ед. изм."
+                                Binding="{Binding Unit}" Width="80"/>
+                            <DataGridTextColumn Header="Норма на ед."
+                                Binding="{Binding QuantityPerUnit, StringFormat='{}{0:N3}'}"
+                                Width="110"/>
+                            <DataGridTextColumn Header="Требуется всего"
+                                Binding="{Binding TotalRequired, StringFormat='{}{0:N3}'}"
+                                Width="120"/>
+                            <DataGridTextColumn Header="На складе"
+                                Binding="{Binding CurrentStock, StringFormat='{}{0:N3}'}"
+                                Width="100"/>
+                            <DataGridTextColumn Header="Статус"
+                                Binding="{Binding StockStatus}" Width="110"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </BlockUIContainer>
+
+                <!-- Итог по сырью -->
+                <BlockUIContainer>
+                    <Border Background="#E3F2FD" CornerRadius="4"
+                            Padding="10,6" Margin="0,4,0,15">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Right">
+                            <TextBlock Text="Готовность к производству: "
+                                       FontWeight="Bold" FontSize="12"/>
+                            <TextBlock x:Name="txtReadiness"
+                                       FontSize="12" FontWeight="Bold"/>
+                        </StackPanel>
+                    </Border>
+                </BlockUIContainer>
+
+                <!-- Подписи -->
+                <BlockUIContainer>
+                    <Grid Margin="0,20,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                            <TextBlock Text="Технолог:" FontWeight="Bold"/>
+                            <TextBlock Text="_______________________ / ___________"
+                                       Margin="0,18,0,0" Foreground="Gray"/>
+                            <TextBlock Text="           (подпись)            (дата)"
+                                       FontSize="9" Foreground="Gray"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Начальник производства:" FontWeight="Bold"/>
+                            <TextBlock Text="_______________________ / ___________"
+                                       Margin="0,18,0,0" Foreground="Gray"/>
+                            <TextBlock Text="           (подпись)            (дата)"
+                                       FontSize="9" Foreground="Gray"/>
+                        </StackPanel>
+                    </Grid>
+                </BlockUIContainer>
+
+            </FlowDocument>
+        </FlowDocumentReader>
+
+        <!-- Кнопка -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="💾  Сохранить в PDF"
+                    Click="SaveToPdfButton_Click"
+                    Width="180" Height="36" Margin="5"
+                    Background="#1565C0" Foreground="White" FontSize="13"/>
+        </StackPanel>
+    </Grid>
+</Page>

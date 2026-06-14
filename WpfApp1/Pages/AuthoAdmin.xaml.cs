@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using WpfApp1.Models;
@@ -292,6 +293,30 @@ namespace WpfApp1.Pages
 
             public string FullName => $"{LastName} {Name} {Surname}".Trim();
             public string AuthoInfo => HasSystemAccess ? $"Логин: {Login}" : "Без доступа к системе";
+        }
+
+        private void PrintListButton_Click(object sender, RoutedEventArgs e)
+        {
+            FlowDocument doc = flowDocumentReader.Document;
+
+            if (doc == null)
+            {
+                MessageBox.Show("Документ не найден.");
+                return;
+            }
+
+            PrintDialog printDialog = new PrintDialog();
+            // Пользователю нужно выбрать "Microsoft Print to PDF"
+            if (printDialog.ShowDialog() == true)
+            {
+                IDocumentPaginatorSource idpSource = doc;
+                printDialog.PrintDocument(idpSource.DocumentPaginator, "Список сотрудников");
+            }
+        }
+
+        private void btnProductionOrders_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ProductionOrderPage());
         }
     }
 }
