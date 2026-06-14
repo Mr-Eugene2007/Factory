@@ -50,7 +50,7 @@ namespace WpfApp1.Services
         }
 
         /// <summary>
-        /// Формирует полное имя с приставкой Mr/Mrs
+        /// Формирует полное имя с приставкой Mr/Mrs 
         /// </summary>
         public static string GetFullNameWithGender(string lastName, string firstName, string middleName = null, Gender gender = null)
         {

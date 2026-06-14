@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AuthoCustomer">
-
+    <!--Основная сетка страницы.-->
     <Grid>
         <Border Background="White" Padding="20" CornerRadius="10" BorderBrush="Gray" BorderThickness="1"
                 HorizontalAlignment="Center" VerticalAlignment="Center">

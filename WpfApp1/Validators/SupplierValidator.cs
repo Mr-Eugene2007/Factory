@@ -4,6 +4,10 @@ using WpfApp1.Models.Validation;
 
 namespace WpfApp1.Validators
 {
+    /// <summary>
+    /// Валидатор данных клиента.
+    /// Использует встроенный механизм валидации .NET (DataAnnotations).
+    /// </summary>
     public class SupplierValidator
     {
         public List<ValidationResult> Validate(SupplierValidationModel model)

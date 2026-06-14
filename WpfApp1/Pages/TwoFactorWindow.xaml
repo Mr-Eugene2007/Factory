@@ -6,7 +6,7 @@
         Width="300"
         WindowStartupLocation="CenterScreen">
 
-
+    <!-- Основная форма -->
     <StackPanel Margin="20">
         <TextBlock Text="Введите код из письма:" Margin="0,0,0,10"/>
         <TextBox x:Name="txtCode" Height="30"/>

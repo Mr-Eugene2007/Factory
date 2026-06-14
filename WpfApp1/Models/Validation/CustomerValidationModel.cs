@@ -2,6 +2,10 @@
 
 namespace WpfApp1.Models.Validation
 {
+    /// <summary>
+    /// Модель данных для валидации клиента.
+    /// Используется совместно с CustomerValidator и атрибутами DataAnnotations.
+    /// </summary>
     public class CustomerValidationModel
     {
         [Required(ErrorMessage = "Имя обязательно.")]

@@ -23,6 +23,7 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
+        <!-- Панель отображения имени текущего пользователя -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2"
                     Grid.ColumnSpan="2" HorizontalAlignment="Right">
             <TextBlock Text=" "/>

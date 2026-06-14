@@ -6,6 +6,10 @@ using WpfApp1.Pages;
 
 namespace WpfApp1.ViewModels
 {
+    /// <summary>
+    /// ViewModel для представления данных сотрудника.
+    /// Используется для привязки данных в интерфейсе и передачи информации в сервисы.
+    /// </summary>
     public class EmployeeViewModel : INotifyPropertyChanged
     {
         private int _id;
@@ -46,6 +50,9 @@ namespace WpfApp1.ViewModels
 
         public string FullName => $"{LastName} {Name} {Surname}".Trim();
 
+        /// <summary>
+        /// Создаёт новый объект сотрудника с заполненными значениями по умолчанию.
+        /// </summary>
         public static EmployeeViewModel CreateNew(string defaultRole)
         {
             return new EmployeeViewModel
@@ -59,6 +66,10 @@ namespace WpfApp1.ViewModels
             };
         }
 
+        /// <summary>
+        /// Создаёт ViewModel на основе существующей записи.
+        /// Используется при редактировании сотрудника.
+        /// </summary>
         public static EmployeeViewModel FromExisting(AuthoAdmin.EmployeeViewModel src, object original)
         {
             return new EmployeeViewModel
@@ -82,8 +93,14 @@ namespace WpfApp1.ViewModels
             };
         }
 
-
+        /// <summary>
+        /// Событие, уведомляющее интерфейс об изменении свойств.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Вызывает событие PropertyChanged для обновления UI.
+        /// </summary>
         protected void OnPropertyChanged([CallerMemberName] string name = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }

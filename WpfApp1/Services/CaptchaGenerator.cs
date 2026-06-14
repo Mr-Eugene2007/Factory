@@ -12,7 +12,7 @@ namespace WpfApp1.Services
         private const string Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
         /// <summary>
-        /// Генерирует случайный текст заданной длины для капчи.
+        /// Генерирует случайный текст заданной длины для капчи. 
         /// </summary>
         /// <param name="length">Длина текста капчи.</param>
         /// <returns>Случайный текст капчи.</returns>

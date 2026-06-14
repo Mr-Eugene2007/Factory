@@ -14,47 +14,79 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="260"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!-- Основная панель авторизации. -->
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
 
+            <!-- Поле ввода логина -->
             <TextBlock Text="Логин:"/>
             <TextBox x:Name="txtLogin"/>
 
+            <!-- Поле ввода пароля -->
             <TextBlock Text="Пароль:"/>
             <PasswordBox x:Name="pswbPassword"/>
 
-            <TextBlock Visibility="Hidden" x:Name="txtBlockCaptcha" Text="Капча"/>
-            <TextBox Visibility="Hidden" x:Name="txtBoxCaptcha"/>
+            <!-- Капча (появляется после нескольких неверных попыток) -->
+            <TextBlock Visibility="Hidden"
+                       x:Name="txtBlockCaptcha"
+                       Text="Капча"/>
+            <TextBox Visibility="Hidden"
+                     x:Name="txtBoxCaptcha"/>
 
-            <TextBlock HorizontalAlignment="Center" Visibility="Hidden" x:Name="txtBlockTimer"/>
+            <!-- Таймер блокировки (появляется при превышении попыток) -->
+            <TextBlock HorizontalAlignment="Center"
+                       Visibility="Hidden"
+                       x:Name="txtBlockTimer"/>
 
-            <StackPanel Orientation="Horizontal" Height="80" HorizontalAlignment="Center">
-                <Button x:Name="btnEnterGuests" Margin="5,15,5,5" Content="Войти как гость" Click="btnEnterGuests_Click"/>
-                <Button x:Name="btnEnter" Margin="5,15,5,5" Content="Войти" Click="btnEnter_Click"/>
+            <!-- Кнопки входа -->
+            <StackPanel Orientation="Horizontal"
+                        Height="80"
+                        HorizontalAlignment="Center">
+                <Button x:Name="btnEnterGuests"
+                        Margin="5,15,5,5"
+                        Content="Войти как гость"
+                        Click="btnEnterGuests_Click"/>
+
+                <Button x:Name="btnEnter"
+                        Margin="5,15,5,5"
+                        Content="Войти"
+                        Click="btnEnter_Click"/>
             </StackPanel>
 
+            <!-- Кнопка восстановления пароля -->
             <Button x:Name="btnForgotPassword"
-            Content="Забыл пароль?"
-            Margin="5"
-            Click="btnForgotPassword_Click"/>
+                    Content="Забыл пароль?"
+                    Margin="5"
+                    Click="btnForgotPassword_Click"/>
 
-            <StackPanel x:Name="panelRecovery" Visibility="Collapsed" Margin="0,10,0,0">
+            <!--Панель восстановления пароля.-->
+            <StackPanel x:Name="panelRecovery"
+                        Visibility="Collapsed"
+                        Margin="0,10,0,0">
 
+                <!-- Логин для восстановления -->
                 <TextBlock Text="Введите логин:"/>
                 <TextBox x:Name="txtRecoveryLogin"/>
 
-                <TextBlock Text="Введите email для получения кода:" Margin="0,10,0,0"/>
+                <!-- Email для отправки кода -->
+                <TextBlock Text="Введите email для получения кода:"
+                           Margin="0,10,0,0"/>
                 <TextBox x:Name="txtRecoveryEmail"/>
 
+                <!-- Кнопка отправки кода -->
                 <Button Content="Отправить код"
-            Margin="5"
-            Click="btnSendRecoveryCode_Click"/>
+                        Margin="5"
+                        Click="btnSendRecoveryCode_Click"/>
 
+                <!-- Ввод кода -->
                 <TextBlock Text="Введите код из письма:"/>
                 <TextBox x:Name="txtRecoveryCode"/>
 
+                <!-- Подтверждение кода -->
                 <Button Content="Подтвердить код"
-            Margin="5"
-            Click="btnConfirmRecoveryCode_Click"/>
+                        Margin="5"
+                        Click="btnConfirmRecoveryCode_Click"/>
 
             </StackPanel>
 

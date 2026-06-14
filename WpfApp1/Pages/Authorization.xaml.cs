@@ -192,7 +192,6 @@ namespace WpfApp1.Pages
                         }
                     }
 
-                    // --- ПЕРВАЯ ПОПЫТКА ---
                     if (click == 1)
                     {
                         if (isPasswordValid)
@@ -244,7 +243,6 @@ namespace WpfApp1.Pages
                             pswbPassword.Password = "";
                         }
                     }
-                    // --- ПОВТОРНЫЕ ПОПЫТКИ (С КАПЧЕЙ) ---
                     else if (click > 1)
                     {
                         if (isPasswordValid && txtBoxCaptcha.Text.Trim() == txtBlockCaptcha.Text)
@@ -462,7 +460,7 @@ namespace WpfApp1.Pages
                 if (customer != null)
                     return customer.email;
 
-                return null; // у админа email нет
+                return null; 
             }
         }
 
